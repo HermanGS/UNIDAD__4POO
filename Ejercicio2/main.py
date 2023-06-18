@@ -10,7 +10,7 @@ El analista funcional de la empresa ha diseñado una interface para llevar a cab
 
 from tkinter import *
 from tkinter import ttk,messagebox
-
+import tkinter as tk
 
 
 
@@ -99,18 +99,25 @@ class app:
         #self.__PrecioConIVALabelResult.pack(side=TOP)
 
         #Bloque5 Botones
-        bloque5 = ttk.Frame(self.__ventana,padding="40 10 50 10")
+        bloque5 = ttk.Frame(self.__ventana,padding="40 20 50 10")
         bloque5.pack(side=TOP,fill=BOTH)
-        bloque5['relief'] = 'raised'
+        #bloque5['relief'] = 'raised'
+        """
         botonCalcular = ttk.Button(bloque5,text="Calcular",command=self.CalculoIVA,padding="0 0 0 0")
         botonCalcular.pack(side=LEFT)
 
         botonSalir = ttk.Button(bloque5,text="Salir",command=self.__ventana.destroy)
         botonSalir.pack(side=RIGHT)
         
-        
+        """
+        botonCalcular2 = tk.Button(bloque5,text="Calcular",command=self.CalculoIVA,bg='#d5e8d4',relief='solid',width=11)
+        botonCalcular2.pack(side=LEFT,fill=BOTH)
 
-        
+        botonSalir2 = tk.Button(bloque5,text="Salir",command=self.__ventana.destroy,bg='#f8cecc',relief='solid',width=11,padx=3,pady=3)
+        botonSalir2.pack(side=RIGHT,fill=BOTH)
+
+        boton3 = tk.Button(bloque5,text="Acerca de",command=self.acercade,bg='lightblue',relief='solid')
+        #boton3.pack(side=BOTTOM)
         
         self.__ventana.mainloop()
 
@@ -140,11 +147,11 @@ class app:
         
 
 
-    def calcular(self):
+    def acercade(self):
         
         
 
-        messagebox.showinfo(title="ola",message="Calculando")
+        messagebox.showinfo(title="Buenas",message="Creador : Herman Gabriel Soria \nDni : 44808998 \nNúmeroDeRegistro : 21728 \nBuenas noches... y Buenos Días...")
         
 
 
