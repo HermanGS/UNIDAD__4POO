@@ -110,10 +110,10 @@ class app:
         botonSalir.pack(side=RIGHT)
         
         """
-        botonCalcular2 = tk.Button(bloque5,text="Calcular",command=self.CalculoIVA,bg='#d5e8d4',relief='solid',width=11)
+        botonCalcular2 = tk.Button(bloque5,text="Calcular",command=self.CalculoIVA,bg='#d5e8d4',relief='groove',width=11)
         botonCalcular2.pack(side=LEFT,fill=BOTH)
 
-        botonSalir2 = tk.Button(bloque5,text="Salir",command=self.__ventana.destroy,bg='#f8cecc',relief='solid',width=11,padx=3,pady=3)
+        botonSalir2 = tk.Button(bloque5,text="Salir",command=self.__ventana.destroy,bg='#f8cecc',relief='groove',width=11,padx=3,pady=3)
         botonSalir2.pack(side=RIGHT,fill=BOTH)
 
         boton3 = tk.Button(bloque5,text="Acerca de",command=self.acercade,bg='lightblue',relief='solid')
